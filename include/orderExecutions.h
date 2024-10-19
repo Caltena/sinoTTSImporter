@@ -16,12 +16,13 @@
 class orderExecutions
 {
 public:
-    orderExecutions();
+    orderExecutions(sql::ResultSet *res);
     ~orderExecutions();
+    void load(sql::ResultSet *res);
 
 
     std::string getOrderid()  { return orderid; }
-    void setOrderid( std::string &orderid_) { orderid = orderid_; }
+    void setOrderid ( const std::string &orderid_) { orderid = orderid_; }
 
     double getExecVol()  { return exec_vol; }
     void setExecVol(double execVol) { exec_vol = execVol; }
@@ -30,19 +31,19 @@ public:
     void setExecPrice(double execPrice) { exec_price = execPrice; }
 
     std::string getContrahent()  { return contrahent; }
-    void setContrahent( std::string &contrahent_) { contrahent = contrahent_; }
+    void setContrahent( const std::string &contrahent_) { contrahent = contrahent_; }
 
     std::string getTs()  { return ts; }
-    void setTs( std::string &ts_) { ts = ts_; }
+    void setTs( const std::string &ts_) { ts = ts_; }
 
     double getInstant()  { return instant; }
     void setInstant(double instant_) { instant = instant_; }
 
     std::string getIfid()  { return ifid; }
-    void setIfid( std::string &ifid_) { ifid = ifid_; }
+    void setIfid( const std::string &ifid_) { ifid = ifid_; }
 
     std::string getUniqueid()  { return uniqueid; }
-    void setUniqueid( std::string &uniqueid_) { uniqueid = uniqueid_; }
+    void setUniqueid( const std::string &uniqueid_) { uniqueid = uniqueid_; }
 
     double getCurrencySpot()  { return currency_spot; }
     void setCurrencySpot(double currencySpot) { currency_spot = currencySpot; }
@@ -60,17 +61,17 @@ public:
     void setStateid(long stateid_) { stateid = stateid_; }
 
     std::string getFlags()  { return flags; }
-    void setFlags( std::string &flags_) { flags = flags_; }
+    void setFlags( const std::string &flags_) { flags = flags_; }
 
     std::string getMifidTvtic()  { return mifid_tvtic; }
-    void setMifidTvtic( std::string &mifidTvtic) { mifid_tvtic = mifidTvtic; }
+    void setMifidTvtic( const std::string &mifidTvtic) { mifid_tvtic = mifidTvtic; }
 
     std::string getExchangetradeid()  { return exchangetradeid; }
-    void setExchangetradeid( std::string exchangetradeid_) { exchangetradeid = exchangetradeid_; }
+    void setExchangetradeid( const std::string exchangetradeid_) { exchangetradeid = exchangetradeid_; }
 
 
     std::string getExchangeorderid()  { return exchangeorderid; }
-    void setExchangeorderid( std::string exchangeorderid_) { exchangeorderid = exchangeorderid_; }
+    void setExchangeorderid( const std::string exchangeorderid_) { exchangeorderid = exchangeorderid_; }
 
     long getId()  { return id; }
     void setId(long id_) { id = id_; }

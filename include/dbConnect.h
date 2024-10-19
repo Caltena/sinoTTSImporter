@@ -8,7 +8,6 @@
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <cppconn/prepared_statement.h>
-#include <log.h>
 #include "orders.h"
 
 
