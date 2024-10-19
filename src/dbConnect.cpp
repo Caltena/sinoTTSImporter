@@ -17,6 +17,19 @@ bool dbConnect::searchOrders(void)
             ord.show();
             ord.save(consino);
         }
+
+        prep_stmt = con->prepareStatement(dbConnect::ssqlSelectOrderExecution);
+        prep_stmt->setInt(1, 243935060);
+        prep_stmt->setInt(2, 243935160);
+        res = prep_stmt->executeQuery();
+        while (res->next())
+        {
+
+            dborderExecutions ordexe(res);
+            //ordexe.show();
+            ordexe.save(consino);
+        }
+
         std::cout << "Done" << std::endl;
         delete res;
         delete prep_stmt;
