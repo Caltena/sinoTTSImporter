@@ -19,10 +19,10 @@ public:
 
         try
         {
-            logFile.open(filename, std::ios::app);
+            logFile.open(filename + getCurrentTimeFile() , std::ios::app);
             if (!logFile.is_open())
             {
-                std::cerr << "Could not open log file: " << filename << std::endl;
+                std::cerr << "Could not open log file: " << filename + getCurrentTimeFile() << std::endl;
             }
         }
         catch (const std::exception &e)
@@ -58,6 +58,15 @@ private:
         std::time_t now = std::time(nullptr);
         char buf[100];
         std::strftime(buf, sizeof(buf), "%Y-%m-%d %H:%M:%S", std::localtime(&now));
+        return buf;
+    }
+
+
+        std::string getCurrentTimeFile()
+    {
+        std::time_t now = std::time(nullptr);
+        char buf[100];
+        std::strftime(buf, sizeof(buf), "%Y-%m-%d.log", std::localtime(&now));
         return buf;
     }
 

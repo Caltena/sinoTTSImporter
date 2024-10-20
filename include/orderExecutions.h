@@ -16,8 +16,9 @@
 class dborderExecutions
 {
 public:
-#include "sqlquery.h"
 
+    #include "sqlquery.h"
+    
     dborderExecutions(sql::ResultSet *res);
     ~dborderExecutions();
     void load(sql::ResultSet *res);

@@ -8,9 +8,9 @@
     "			    oe.id > ?                   "
     "			    AND oe.id <= ?              "
     "			ORDER BY                        "
-    "			    oe.id ASC                   "
+    "			    oe.id ASC                   ";
 
-
+ std::string ssqlInsertOrderExecution = ""
     " INSERT INTO `db_tickts`.`orderexecutions` "
     "        (  `id`,               "
     "           `orderid`,          "

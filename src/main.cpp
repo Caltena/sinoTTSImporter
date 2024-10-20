@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
   // Connect to local DB
 
 
-  Logger logger("log.txt");
+  Logger logger("log");
   logger.log("Programm gestartet", Logger::INFO);
   logger.log("Read Database", Logger::INFO);
   dbConnect *dbC = new dbConnect(dbtickts , dbsino );
