@@ -21,6 +21,8 @@ public:
     
     dborderExecutions(sql::ResultSet *res);
     ~dborderExecutions();
+
+
     void load(sql::ResultSet *res);
     void save(sql::Connection *con);
 

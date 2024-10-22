@@ -7,6 +7,7 @@
 #include "log.h"
 #include <string>
 #include <iostream>
+#include <zlib.h>
 
 /*
 $ sudo apt-get install libcpprest-dev
