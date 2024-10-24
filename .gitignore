@@ -97,3 +97,6 @@ bin/appDB
 .gitignore
 Makefile
 log.txt
+build/.cmake/api/v1/reply/codemodel-v2-3d00e00dfde3da8b046f.json
+build/.cmake/api/v1/reply/index-2024-10-24T18-51-16-0399.json
+build/.cmake/api/v1/reply/target-appDB-Debug-5daa7e2ef73bb2511bc8.json
